@@ -19,7 +19,6 @@ export async function GET(_request) {
 export async function POST(request) {
   try {
     const res = await request.json();
-
     const { data, error } = await supabase
       .from("posts")
       .insert({
