@@ -16,6 +16,12 @@
   }
 }
 
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -24,4 +30,25 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  display: grid;
+  height: 100%;
+  height: 100dvh;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
 }
